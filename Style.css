@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+body{
+    background-color: var(--Very-light-gray);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+   
+}
+
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 12px;
+    margin: 2rem;
+    overflow: hidden;
+}
+
+.box1{
+    background-color: var(--Bright-orange);
+}
+
+.box2{
+    background-color: var(--Dark-cyan);
+}
+
+.box3{
+    background-color: var(--Very-dark-cyan);
+}
+
+.box{
+    padding: 40px;
+}
+
+h2{
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase; /*Para que el titulo sea mayusculas*/
+    color: var(--Very-light-gray);
+    font-size: 30px;
+}
+
+p{
+color: var(--Transparent-white);
+line-height: 1.6; /*Para que haya espacios entre lineas*/
+}
+
+a{
+    text-decoration: none; /*Para que no haya ningun subrayado u otro efecto*/
+    background-color: var(--Very-light-gray);
+    padding: 13px 27px ;
+    border-radius: 26px;
+    margin-top: 60px;
+    display: inline-block; /*Permite establecer un ancho y un alto*/
+    border: 2px solid var(--Very-light-gray);
+    transition: all .4s ease-in-out; /*Para tener una transicion de 4 sg al momento de colocar el cursor sobre el boton*/
+}
+
+.box1 a{
+    color: var(--Bright-orange);
+}
+
+.box2 a{
+    color: var(--Dark-cyan);
+}
+
+.box3 a{
+    color: var(--Very-dark-cyan);
+}
+
+.box a:hover{
+    color: var(--Very-light-gray) ;
+    background: transparent;
+}
+
+@media only screen and (max-width:768px){
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width:425px){
+    .wrapper{
+       margin: 2rem .5rem;
+    }
+}
+
+.attribution { font-size: 14px; text-align: center ;  }
+.attribution a { color: hsl(228, 45%, 44%); }
